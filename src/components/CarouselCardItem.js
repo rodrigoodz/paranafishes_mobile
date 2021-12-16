@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import fonts from "../theme/fonts";
+import colors from "../theme/colors";
 
 export const SLIDER_WIDTH = Dimensions.get("window").width;
 export const ITEM_WIDTH = Math.round(SLIDER_WIDTH * 0.85);
@@ -37,7 +38,7 @@ const CarouselCardItem = ({ item, index }) => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "white",
+    backgroundColor: colors.cardColor,
     borderRadius: 8,
     width: ITEM_WIDTH,
     paddingBottom: 5,

@@ -1,9 +1,10 @@
 const colors = {
-  primary: "#fff",
+  primary: "#6998AB",
   secondary: "#34495e",
-  backgroundColor: "#485460",
-  cardColor: "#2980b9",
-  textPrimary: "white",
+  backgroundColor: "#B1D0E0",
+  tabNavigatorColor: "#406882",
+  cardColor: "#6998AB",
+  textPrimary: "#1A374D",
 };
 
 export default colors;

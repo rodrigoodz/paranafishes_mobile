@@ -26,13 +26,6 @@ const FishesScreen = ({ route }) => {
         flexDirection: "column",
       }}
     >
-      <Image
-        source={{
-          uri: "https://www.comunicaciontucuman.gob.ar/fotos/cache/notas/2020/12/01/650x440_201201102518_14329.jpg",
-        }}
-        style={StyleSheet.absoluteFillObject}
-        blurRadius={2}
-      />
       {titleText !== "" && <Title text={titleText} />}
       <ScrollList data={fishesToDisplay} />
       <GoBackButton />

@@ -10,6 +10,7 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import fonts from "../theme/fonts";
+import colors from "../theme/colors";
 
 const AVATAR_SIZE = 70;
 const SPACING = 10;
@@ -67,7 +68,7 @@ const ScrollList = ({ data }) => {
                   flexDirection: "row",
                   padding: SPACING,
                   marginBottom: SPACING,
-                  backgroundColor: "rgba(0,0,0,0.4)",
+                  backgroundColor: "#fff",
                   borderRadius: 12,
                   overflow: "hidden",
                   transform: [{ scale }],
@@ -100,7 +101,7 @@ const ScrollList = ({ data }) => {
                 {!imageLoaded && (
                   <ActivityIndicator
                     size="large"
-                    color="white"
+                    color="#000"
                     style={{
                       position: "absolute",
                       left: 0,
@@ -116,7 +117,7 @@ const ScrollList = ({ data }) => {
                     style={{
                       fontSize: fonts.size.font16,
                       fontWeight: "bold",
-                      color: "white",
+                      color: colors.textPrimary,
                     }}
                   >
                     {item.scientificName}
@@ -126,7 +127,7 @@ const ScrollList = ({ data }) => {
                       <View
                         key={index}
                         style={{
-                          backgroundColor: "#686de0",
+                          backgroundColor: colors.primary,
                           borderRadius: 8,
                           padding: name ? 2 : 0,
                           marginRight: 5,
@@ -136,7 +137,7 @@ const ScrollList = ({ data }) => {
                           style={{
                             fontSize: fonts.size.font12,
                             fontWeight: "600",
-                            color: "white",
+                            color: colors.textPrimary,
                           }}
                         >
                           {name}

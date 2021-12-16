@@ -48,7 +48,7 @@ const FishDescriptionScreen = ({ route }) => {
             zIndex: 10,
             fontWeight: "bold",
             fontSize: fonts.size.font18,
-            color: "white",
+            color: colors.textPrimary,
           }}
         >
           {fishInfo.scientificName}
@@ -67,7 +67,7 @@ const FishDescriptionScreen = ({ route }) => {
             <View
               key={index}
               style={{
-                backgroundColor: "rgba(0,0,0,0.4)",
+                backgroundColor: colors.primary,
                 borderRadius: 8,
                 padding: name ? 4 : 0,
                 marginLeft: 5,
@@ -76,7 +76,7 @@ const FishDescriptionScreen = ({ route }) => {
               <Text
                 style={{
                   fontSize: fonts.size.font12,
-                  color: "white",
+                  color: colors.textPrimary,
                 }}
               >
                 {name}
@@ -107,84 +107,84 @@ const FishDescriptionScreen = ({ route }) => {
           <View style={{ marginBottom: 5 }}>
             <Text
               style={{
-                color: "white",
+                color: colors.textPrimary,
                 fontSize: fonts.size.font14,
                 fontWeight: "bold",
               }}
             >
               Orden
             </Text>
-            <Text style={{ textAlign: "justify", color: "white" }}>
+            <Text style={{ textAlign: "justify", color: colors.textPrimary }}>
               {fishInfo.order}
             </Text>
           </View>
           <View style={{ marginBottom: 5 }}>
             <Text
               style={{
-                color: "white",
+                color: colors.textPrimary,
                 fontSize: fonts.size.font14,
                 fontWeight: "bold",
               }}
             >
               Familia
             </Text>
-            <Text style={{ textAlign: "justify", color: "white" }}>
+            <Text style={{ textAlign: "justify", color: colors.textPrimary }}>
               {fishInfo.family}
             </Text>
           </View>
           <View style={{ marginBottom: 5 }}>
             <Text
               style={{
-                color: "white",
+                color: colors.textPrimary,
                 fontSize: fonts.size.font14,
                 fontWeight: "bold",
               }}
             >
               Descripción
             </Text>
-            <Text style={{ textAlign: "justify", color: "white" }}>
+            <Text style={{ textAlign: "justify", color: colors.textPrimary }}>
               {fishInfo.description}
             </Text>
           </View>
           <View style={{ marginBottom: 5 }}>
             <Text
               style={{
-                color: "white",
+                color: colors.textPrimary,
                 fontSize: fonts.size.font14,
                 fontWeight: "bold",
               }}
             >
               Biología
             </Text>
-            <Text style={{ textAlign: "justify", color: "white" }}>
+            <Text style={{ textAlign: "justify", color: colors.textPrimary }}>
               {fishInfo.biology}
             </Text>
           </View>
           <View style={{ marginBottom: 5 }}>
             <Text
               style={{
-                color: "white",
+                color: colors.textPrimary,
                 fontSize: fonts.size.font14,
                 fontWeight: "bold",
               }}
             >
               Distribución
             </Text>
-            <Text style={{ textAlign: "justify", color: "white" }}>
+            <Text style={{ textAlign: "justify", color: colors.textPrimary }}>
               {fishInfo.distribution}
             </Text>
           </View>
           <View style={{ marginBottom: 5 }}>
             <Text
               style={{
-                color: "white",
+                color: colors.textPrimary,
                 fontSize: fonts.size.font14,
                 fontWeight: "bold",
               }}
             >
               Observaciones
             </Text>
-            <Text style={{ textAlign: "justify", color: "white" }}>
+            <Text style={{ textAlign: "justify", color: colors.textPrimary }}>
               {fishInfo.observations}
             </Text>
           </View>

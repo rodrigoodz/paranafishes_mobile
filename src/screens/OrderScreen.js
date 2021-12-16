@@ -42,7 +42,7 @@ const OrderScreen = ({ route, navigation }) => {
           <View>
             <Text
               style={{
-                color: "white",
+                color: colors.textPrimary,
                 textAlign: "justify",
               }}
             >
@@ -50,7 +50,7 @@ const OrderScreen = ({ route, navigation }) => {
             </Text>
             <Text
               style={{
-                color: "white",
+                color: colors.textPrimary,
                 fontSize: fonts.size.font18,
                 marginTop: 5,
                 marginBottom: 5,
@@ -62,7 +62,7 @@ const OrderScreen = ({ route, navigation }) => {
             {orderInfo.family.map((family) => (
               <TouchableOpacity
                 style={{
-                  backgroundColor: "white",
+                  backgroundColor: colors.primary,
                   marginBottom: 5,
                   padding: 5,
                   borderRadius: 8,

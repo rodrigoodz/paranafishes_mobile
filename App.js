@@ -10,6 +10,7 @@ import OrderScreen from "./src/screens/OrderScreen";
 import FishesScreen from "./src/screens/FishesScreen";
 import FishDescriptionScreen from "./src/screens/FishDescriptionScreen";
 import { StateProvider } from "./StateContext";
+import colors from "./src/theme/colors";
 
 const HomeStack = createNativeStackNavigator();
 
@@ -50,10 +51,10 @@ export default function App() {
 
               return <Ionicons name={iconName} size={size} color={color} />;
             },
-            tabBarActiveTintColor: "white",
-            tabBarInactiveTintColor: "gray",
+            tabBarActiveTintColor: "#fff",
+            tabBarInactiveTintColor: "#f3f3f3",
             headerShown: false,
-            tabBarStyle: { backgroundColor: "#1e272e" },
+            tabBarStyle: { backgroundColor: colors.tabNavigatorColor },
           })}
         >
           <Tab.Screen name="Explorar" component={HomeStackScreen} />

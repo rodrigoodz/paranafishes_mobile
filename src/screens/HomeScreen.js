@@ -28,13 +28,13 @@ const HomeScreen = ({ navigation }) => {
         backgroundColor: colors.backgroundColor,
       }}
     >
-      <Image
+      {/* <Image
         source={{
           uri: "https://www.comunicaciontucuman.gob.ar/fotos/cache/notas/2020/12/01/650x440_201201102518_14329.jpg",
         }}
         style={StyleSheet.absoluteFillObject}
         blurRadius={2}
-      />
+      /> */}
       <Title text={"Explorar"} />
       <View
         style={{
@@ -78,7 +78,7 @@ const HomeScreen = ({ navigation }) => {
       >
         <Text
           style={{
-            color: "white",
+            color: colors.textPrimary,
             fontSize: fonts.size.font18,
             fontWeight: "bold",
             marginBottom: 10,
@@ -88,6 +88,7 @@ const HomeScreen = ({ navigation }) => {
           Ver todas las especies
         </Text>
       </TouchableOpacity>
+      <StatusBar backgroundColor="#B1D0E0" translucent />
     </View>
   );
 };
