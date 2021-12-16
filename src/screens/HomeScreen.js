@@ -80,12 +80,12 @@ const HomeScreen = ({ navigation }) => {
           style={{
             color: "white",
             fontSize: fonts.size.font18,
-            marginLeft: 20,
             fontWeight: "bold",
             marginBottom: 10,
+            textAlign: "center",
           }}
         >
-          Ver Todos
+          Ver todas las especies
         </Text>
       </TouchableOpacity>
     </View>
