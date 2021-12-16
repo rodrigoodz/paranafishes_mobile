@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import fonts from "../theme/fonts";
 
 export const SLIDER_WIDTH = Dimensions.get("window").width;
 export const ITEM_WIDTH = Math.round(SLIDER_WIDTH * 0.85);
@@ -62,7 +63,7 @@ const styles = StyleSheet.create({
   },
   header: {
     color: "#222",
-    fontSize: 28,
+    fontSize: fonts.size.font26,
     fontWeight: "bold",
     paddingLeft: 5,
     // paddingTop: 5,

@@ -10,6 +10,7 @@ import Title from "../components/Title";
 import colors from "../theme/colors";
 import StateContext from "../../StateContext";
 import GoBackButton from "../components/GoBackButton";
+import fonts from "../theme/fonts";
 
 const OrderScreen = ({ route, navigation }) => {
   const { orders } = useContext(StateContext);
@@ -50,7 +51,7 @@ const OrderScreen = ({ route, navigation }) => {
             <Text
               style={{
                 color: "white",
-                fontSize: 20,
+                fontSize: fonts.size.font18,
                 marginTop: 5,
                 marginBottom: 5,
                 fontWeight: "bold",

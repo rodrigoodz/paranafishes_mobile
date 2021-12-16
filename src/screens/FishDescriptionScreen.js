@@ -10,6 +10,7 @@ import {
 import StateContext from "../../StateContext";
 import GoBackButton from "../components/GoBackButton";
 import colors from "../theme/colors";
+import fonts from "../theme/fonts";
 
 const ITEM_WIDTH = Math.round(Dimensions.get("window").width * 0.85);
 
@@ -46,7 +47,7 @@ const FishDescriptionScreen = ({ route }) => {
             margin: 10,
             zIndex: 10,
             fontWeight: "bold",
-            fontSize: 20,
+            fontSize: fonts.size.font18,
             color: "white",
           }}
         >
@@ -74,7 +75,7 @@ const FishDescriptionScreen = ({ route }) => {
             >
               <Text
                 style={{
-                  fontSize: 16,
+                  fontSize: fonts.size.font12,
                   color: "white",
                 }}
               >
@@ -104,7 +105,13 @@ const FishDescriptionScreen = ({ route }) => {
       >
         <ScrollView showsVerticalScrollIndicator={false}>
           <View style={{ marginBottom: 5 }}>
-            <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }}>
+            <Text
+              style={{
+                color: "white",
+                fontSize: fonts.size.font14,
+                fontWeight: "bold",
+              }}
+            >
               Orden
             </Text>
             <Text style={{ textAlign: "justify", color: "white" }}>
@@ -112,7 +119,13 @@ const FishDescriptionScreen = ({ route }) => {
             </Text>
           </View>
           <View style={{ marginBottom: 5 }}>
-            <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }}>
+            <Text
+              style={{
+                color: "white",
+                fontSize: fonts.size.font14,
+                fontWeight: "bold",
+              }}
+            >
               Familia
             </Text>
             <Text style={{ textAlign: "justify", color: "white" }}>
@@ -120,7 +133,13 @@ const FishDescriptionScreen = ({ route }) => {
             </Text>
           </View>
           <View style={{ marginBottom: 5 }}>
-            <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }}>
+            <Text
+              style={{
+                color: "white",
+                fontSize: fonts.size.font14,
+                fontWeight: "bold",
+              }}
+            >
               Descripción
             </Text>
             <Text style={{ textAlign: "justify", color: "white" }}>
@@ -128,7 +147,13 @@ const FishDescriptionScreen = ({ route }) => {
             </Text>
           </View>
           <View style={{ marginBottom: 5 }}>
-            <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }}>
+            <Text
+              style={{
+                color: "white",
+                fontSize: fonts.size.font14,
+                fontWeight: "bold",
+              }}
+            >
               Biología
             </Text>
             <Text style={{ textAlign: "justify", color: "white" }}>
@@ -136,7 +161,13 @@ const FishDescriptionScreen = ({ route }) => {
             </Text>
           </View>
           <View style={{ marginBottom: 5 }}>
-            <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }}>
+            <Text
+              style={{
+                color: "white",
+                fontSize: fonts.size.font14,
+                fontWeight: "bold",
+              }}
+            >
               Distribución
             </Text>
             <Text style={{ textAlign: "justify", color: "white" }}>
@@ -144,7 +175,13 @@ const FishDescriptionScreen = ({ route }) => {
             </Text>
           </View>
           <View style={{ marginBottom: 5 }}>
-            <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }}>
+            <Text
+              style={{
+                color: "white",
+                fontSize: fonts.size.font14,
+                fontWeight: "bold",
+              }}
+            >
               Observaciones
             </Text>
             <Text style={{ textAlign: "justify", color: "white" }}>

@@ -9,6 +9,7 @@ import {
   ActivityIndicator,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import fonts from "../theme/fonts";
 
 const AVATAR_SIZE = 70;
 const SPACING = 10;
@@ -112,7 +113,11 @@ const ScrollList = ({ data }) => {
 
                 <View>
                   <Text
-                    style={{ fontSize: 18, fontWeight: "700", color: "white" }}
+                    style={{
+                      fontSize: fonts.size.font16,
+                      fontWeight: "bold",
+                      color: "white",
+                    }}
                   >
                     {item.scientificName}
                   </Text>
@@ -129,7 +134,8 @@ const ScrollList = ({ data }) => {
                       >
                         <Text
                           style={{
-                            fontSize: 15,
+                            fontSize: fonts.size.font12,
+                            fontWeight: "600",
                             color: "white",
                           }}
                         >
