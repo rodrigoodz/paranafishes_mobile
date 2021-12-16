@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import {
   View,
   Text,
-  Button,
   StatusBar,
   ScrollView,
   TouchableOpacity,
@@ -10,6 +9,7 @@ import {
 import Title from "../components/Title";
 import colors from "../theme/colors";
 import StateContext from "../../StateContext";
+import GoBackButton from "../components/GoBackButton";
 
 const OrderScreen = ({ route, navigation }) => {
   const { orders } = useContext(StateContext);
@@ -79,7 +79,7 @@ const OrderScreen = ({ route, navigation }) => {
           </View>
         )}
       </ScrollView>
-      <Button title="Volver" onPress={() => navigation.goBack()} />
+      <GoBackButton />
     </View>
   );
 };
