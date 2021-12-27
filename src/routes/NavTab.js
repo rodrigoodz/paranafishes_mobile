@@ -4,6 +4,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import SearchScreen from "../screens/SearchScreen";
 import colors from "../theme/colors";
+import FaqScreen from "../screens/FaqScreen";
 
 const Tab = createBottomTabNavigator();
 
@@ -14,11 +15,11 @@ const NavTab = () => {
         tabBarIcon: ({ focused, color, size }) => {
           let iconName;
           if (route.name === "Explorar") {
-            iconName = focused
-              ? "ios-information-circle"
-              : "ios-information-circle-outline";
+            iconName = focused ? "md-compass-sharp" : "md-compass-outline";
           } else if (route.name === "Buscar") {
-            iconName = focused ? "search-circle" : "search-circle-outline";
+            iconName = focused ? "ios-search" : "ios-search-outline";
+          } else if (route.name === "FAQ") {
+            iconName = focused ? "reader" : "reader-outline";
           }
           return <Ionicons name={iconName} size={size} color={color} />;
         },
@@ -30,6 +31,7 @@ const NavTab = () => {
     >
       <Tab.Screen name="Explorar" component={HomeStack} />
       <Tab.Screen name="Buscar" component={SearchScreen} />
+      <Tab.Screen name="FAQ" component={FaqScreen} />
     </Tab.Navigator>
   );
 };

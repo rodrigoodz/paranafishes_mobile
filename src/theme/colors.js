@@ -5,6 +5,7 @@ const colors = {
   tabNavigatorColor: "#406882",
   cardColor: "#6998AB",
   textPrimary: "#1A374D",
+  textSecondary: "#0a9396",
 };
 
 export default colors;
