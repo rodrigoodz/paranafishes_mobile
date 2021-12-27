@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import {
   Image,
-  Animated,
   Text,
   View,
-  Dimensions,
   TouchableOpacity,
   ActivityIndicator,
+  FlatList,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import fonts from "../theme/fonts";
@@ -14,56 +13,28 @@ import colors from "../theme/colors";
 
 const AVATAR_SIZE = 70;
 const SPACING = 10;
-const ITEM_SIZE = AVATAR_SIZE + SPACING * 3;
 
 const ScrollList = ({ data }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   const navigation = useNavigation();
 
-  const scrollY = React.useRef(new Animated.Value(0)).current;
-
   return (
     <View style={{ flex: 1 }}>
-      <Animated.FlatList
+      <FlatList
         data={data}
-        onScroll={Animated.event(
-          [{ nativeEvent: { contentOffset: { y: scrollY } } }],
-          { useNativeDriver: true }
-        )}
         keyExtractor={(item) => item.id}
         contentContainerStyle={{
           margin: 10,
         }}
         renderItem={({ item, index }) => {
-          const inputRange = [
-            -1,
-            0,
-            ITEM_SIZE * index,
-            ITEM_SIZE * (index + 2),
-          ];
-
-          const opacityInputRange = [
-            -1,
-            0,
-            ITEM_SIZE * index,
-            ITEM_SIZE * (index + 1),
-          ];
-          const scale = scrollY.interpolate({
-            inputRange,
-            outputRange: [1, 1, 1, 0],
-          });
-          const opacity = scrollY.interpolate({
-            inputRange: opacityInputRange,
-            outputRange: [1, 1, 1, 0],
-          });
           return (
             <TouchableOpacity
               onPress={() =>
                 navigation.navigate("Pez", { fishName: item.scientificName })
               }
             >
-              <Animated.View
+              <View
                 style={{
                   flexDirection: "row",
                   padding: SPACING,
@@ -71,15 +42,6 @@ const ScrollList = ({ data }) => {
                   backgroundColor: "rgba(255,255,255,0.5)",
                   borderRadius: 12,
                   overflow: "hidden",
-                  transform: [{ scale }],
-                  opacity: opacity,
-                  // shadowColor: "#000",
-                  // shadowOffset: {
-                  //   width: 0,
-                  //   height: 10,
-                  // },
-                  // shadowOpacity: 0.3,
-                  // shadowRadius: 20,
                 }}
               >
                 <Image
@@ -94,7 +56,6 @@ const ScrollList = ({ data }) => {
                     height: AVATAR_SIZE,
                     borderRadius: AVATAR_SIZE,
                     marginRight: SPACING,
-                    // backgroundColor: "rgba(255,255,255,0.4)",
                   }}
                   resizeMode={"contain"}
                 />
@@ -146,7 +107,7 @@ const ScrollList = ({ data }) => {
                     ))}
                   </View>
                 </View>
-              </Animated.View>
+              </View>
             </TouchableOpacity>
           );
         }}
