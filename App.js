@@ -19,10 +19,10 @@ function HomeStackScreen() {
     <HomeStack.Navigator
       screenOptions={() => ({
         headerShown: false,
+        animation: "fade",
       })}
     >
       <HomeStack.Screen name="Home" component={HomeScreen} />
-
       <HomeStack.Screen name="Orden" component={OrderScreen} />
       <HomeStack.Screen name="Peces" component={FishesScreen} />
       <HomeStack.Screen name="Pez" component={FishDescriptionScreen} />

@@ -68,7 +68,7 @@ const ScrollList = ({ data }) => {
                   flexDirection: "row",
                   padding: SPACING,
                   marginBottom: SPACING,
-                  backgroundColor: "#fff",
+                  backgroundColor: "rgba(255,255,255,0.5)",
                   borderRadius: 12,
                   overflow: "hidden",
                   transform: [{ scale }],
@@ -94,7 +94,7 @@ const ScrollList = ({ data }) => {
                     height: AVATAR_SIZE,
                     borderRadius: AVATAR_SIZE,
                     marginRight: SPACING,
-                    backgroundColor: "rgba(255,255,255,0.4)",
+                    // backgroundColor: "rgba(255,255,255,0.4)",
                   }}
                   resizeMode={"contain"}
                 />
