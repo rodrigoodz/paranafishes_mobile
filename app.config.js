@@ -2,8 +2,8 @@ import "dotenv/config";
 
 export default {
   expo: {
-    name: "mobile",
-    slug: "mobile",
+    name: "PecesRioParana",
+    slug: "PecesRioParana",
     version: "1.0.0",
     orientation: "portrait",
     icon: "./assets/icon.png",
@@ -25,6 +25,7 @@ export default {
         backgroundColor: "#FFFFFF",
       },
       softwareKeyboardLayoutMode: "pan",
+      package: "com.rodrigoodz.pecesParana",
     },
     web: {
       favicon: "./assets/favicon.png",
