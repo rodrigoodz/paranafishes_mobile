@@ -8,9 +8,9 @@ import {
 } from "react-native";
 import Title from "../components/Title";
 import colors from "../theme/colors";
-import StateContext from "../../StateContext";
 import GoBackButton from "../components/GoBackButton";
 import fonts from "../theme/fonts";
+import StateContext from "../../StateContext";
 
 const OrderScreen = ({ route, navigation }) => {
   const { orders } = useContext(StateContext);

@@ -1,19 +1,12 @@
 import React, { useContext } from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  StatusBar,
-  TouchableOpacity,
-  Image,
-} from "react-native";
+import { View, Text, StatusBar, TouchableOpacity } from "react-native";
 import MyCarousel from "../components/MyCarousel";
 import Title from "../components/Title";
-import StateContext from "../../StateContext";
 import colors from "../theme/colors";
 import getFamilies from "../helpers/getFamilies";
 import getOrders from "../helpers/getOrders";
 import fonts from "../theme/fonts";
+import StateContext from "../../StateContext";
 
 const HomeScreen = ({ navigation }) => {
   const fishesData = useContext(StateContext);

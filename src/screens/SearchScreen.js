@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
 import { View, Text, TextInput, StatusBar } from "react-native";
 import colors from "../theme/colors";
-import StateContext from "../../StateContext";
 import ScrollList from "../components/ScrollList";
 import removeAccents from "../helpers/removeAccents";
 import Title from "../components/Title";
+import StateContext from "../../StateContext";
 
 const SearchScreen = () => {
   const [searchText, setSearchText] = useState("");
@@ -12,10 +12,6 @@ const SearchScreen = () => {
   const [errorMessage, setErrorMessage] = useState("");
 
   const { fishes } = useContext(StateContext);
-
-  // true cuando no sea null y true cuando sea []
-  // console.log(results?.length === 0);
-  // console.log(Boolean(!results));
 
   const handleSearch = () => {
     if (searchText.length !== 0) {
@@ -56,7 +52,7 @@ const SearchScreen = () => {
       <Title text="Buscar" />
       <View
         style={{
-          backgroundColor: "#fff",
+          backgroundColor: "rgba(255,255,255,0.6)",
           padding: 5,
           marginTop: 5,
           marginBottom: 5,
