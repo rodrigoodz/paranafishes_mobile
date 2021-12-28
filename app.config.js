@@ -26,6 +26,7 @@ export default {
       },
       softwareKeyboardLayoutMode: "pan",
       package: "com.rodrigoodz.pecesParana",
+      permissions: [],
     },
     web: {
       favicon: "./assets/favicon.png",
