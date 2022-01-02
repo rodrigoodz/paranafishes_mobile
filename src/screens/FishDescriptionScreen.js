@@ -132,62 +132,71 @@ const FishDescriptionScreen = ({ route }) => {
               {fishInfo.family}
             </Text>
           </View>
-          <View style={{ marginBottom: 5 }}>
-            <Text
-              style={{
-                color: colors.textPrimary,
-                fontSize: fonts.size.font14,
-                fontWeight: "bold",
-              }}
-            >
-              Descripción
-            </Text>
-            <Text style={{ textAlign: "justify", color: colors.textPrimary }}>
-              {fishInfo.description}
-            </Text>
-          </View>
-          <View style={{ marginBottom: 5 }}>
-            <Text
-              style={{
-                color: colors.textPrimary,
-                fontSize: fonts.size.font14,
-                fontWeight: "bold",
-              }}
-            >
-              Biología
-            </Text>
-            <Text style={{ textAlign: "justify", color: colors.textPrimary }}>
-              {fishInfo.biology}
-            </Text>
-          </View>
-          <View style={{ marginBottom: 5 }}>
-            <Text
-              style={{
-                color: colors.textPrimary,
-                fontSize: fonts.size.font14,
-                fontWeight: "bold",
-              }}
-            >
-              Distribución
-            </Text>
-            <Text style={{ textAlign: "justify", color: colors.textPrimary }}>
-              {fishInfo.distribution}
-            </Text>
-          </View>
-          <View style={{ marginBottom: 5 }}>
-            <Text
-              style={{
-                color: colors.textPrimary,
-                fontSize: fonts.size.font14,
-                fontWeight: "bold",
-              }}
-            >
-              Observaciones
-            </Text>
-            <Text style={{ textAlign: "justify", color: colors.textPrimary }}>
-              {fishInfo.observations}
-            </Text>
-          </View>
+          {Boolean(fishInfo.description) && (
+            <View style={{ marginBottom: 5 }}>
+              <Text
+                style={{
+                  color: colors.textPrimary,
+                  fontSize: fonts.size.font14,
+                  fontWeight: "bold",
+                }}
+              >
+                Descripción
+              </Text>
+              <Text style={{ textAlign: "justify", color: colors.textPrimary }}>
+                {fishInfo.description}
+              </Text>
+            </View>
+          )}
+          {Boolean(fishInfo.biology) && (
+            <View style={{ marginBottom: 5 }}>
+              <Text
+                style={{
+                  color: colors.textPrimary,
+                  fontSize: fonts.size.font14,
+                  fontWeight: "bold",
+                }}
+              >
+                Biología
+              </Text>
+              <Text style={{ textAlign: "justify", color: colors.textPrimary }}>
+                {fishInfo.biology}
+              </Text>
+            </View>
+          )}
+
+          {Boolean(fishInfo.distribution) && (
+            <View style={{ marginBottom: 5 }}>
+              <Text
+                style={{
+                  color: colors.textPrimary,
+                  fontSize: fonts.size.font14,
+                  fontWeight: "bold",
+                }}
+              >
+                Distribución
+              </Text>
+              <Text style={{ textAlign: "justify", color: colors.textPrimary }}>
+                {fishInfo.distribution}
+              </Text>
+            </View>
+          )}
+          {Boolean(fishInfo.observations) && (
+            <View style={{ marginBottom: 5 }}>
+              <Text
+                style={{
+                  color: colors.textPrimary,
+                  fontSize: fonts.size.font14,
+                  fontWeight: "bold",
+                }}
+              >
+                Observaciones
+              </Text>
+              <Text style={{ textAlign: "justify", color: colors.textPrimary }}>
+                {fishInfo.observations}
+              </Text>
+            </View>
+          )}
         </ScrollView>
       </View>
       <GoBackButton />
