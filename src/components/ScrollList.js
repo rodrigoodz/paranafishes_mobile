@@ -84,27 +84,28 @@ const ScrollList = ({ data }) => {
                     {item.scientificName}
                   </Text>
                   <View style={{ flexDirection: "row" }}>
-                    {item.commonName.map((name, index) => (
-                      <View
-                        key={index}
-                        style={{
-                          backgroundColor: colors.primary,
-                          borderRadius: 8,
-                          padding: name ? 2 : 0,
-                          marginRight: 5,
-                        }}
-                      >
-                        <Text
+                    {item.commonName.length !== 0 &&
+                      item.commonName.map((name, index) => (
+                        <View
+                          key={index}
                           style={{
-                            fontSize: fonts.size.font12,
-                            fontWeight: "600",
-                            color: colors.textPrimary,
+                            backgroundColor: colors.primary,
+                            borderRadius: 8,
+                            padding: name ? 2 : 0,
+                            marginRight: 5,
                           }}
                         >
-                          {name}
-                        </Text>
-                      </View>
-                    ))}
+                          <Text
+                            style={{
+                              fontSize: fonts.size.font12,
+                              fontWeight: "600",
+                              color: colors.textPrimary,
+                            }}
+                          >
+                            {name}
+                          </Text>
+                        </View>
+                      ))}
                   </View>
                 </View>
               </View>
