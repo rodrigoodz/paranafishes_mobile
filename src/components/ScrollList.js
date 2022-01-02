@@ -8,6 +8,7 @@ import {
   FlatList,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import Ionicons from "react-native-vector-icons/Ionicons";
 import fonts from "../theme/fonts";
 import colors from "../theme/colors";
 
@@ -44,21 +45,44 @@ const ScrollList = ({ data }) => {
                   overflow: "hidden",
                 }}
               >
-                <Image
-                  source={{
-                    uri: `https://firebasestorage.googleapis.com/v0/b/paranafishes.appspot.com/o/${encodeURIComponent(
-                      item.imageName
-                    )}.png?alt=media`,
-                  }}
-                  onLoadEnd={() => setImageLoaded(true)}
-                  style={{
-                    width: AVATAR_SIZE,
-                    height: AVATAR_SIZE,
-                    borderRadius: AVATAR_SIZE,
-                    marginRight: SPACING,
-                  }}
-                  resizeMode={"contain"}
-                />
+                {Boolean(item.imageName) ? (
+                  <Image
+                    source={{
+                      uri: `https://firebasestorage.googleapis.com/v0/b/paranafishes.appspot.com/o/${encodeURIComponent(
+                        item.imageName
+                      )}.png?alt=media`,
+                    }}
+                    onLoadEnd={() => setImageLoaded(true)}
+                    style={{
+                      width: AVATAR_SIZE,
+                      height: AVATAR_SIZE,
+                      borderRadius: AVATAR_SIZE,
+                      marginRight: SPACING,
+                    }}
+                    resizeMode={"contain"}
+                  />
+                ) : (
+                  <View
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignContent: "center",
+                      width: AVATAR_SIZE,
+                      height: AVATAR_SIZE,
+                      marginRight: SPACING,
+                    }}
+                  >
+                    <Ionicons
+                      name={"image-outline"}
+                      size={50}
+                      color={colors.primary}
+                      style={{
+                        textAlign: "center",
+                      }}
+                    />
+                  </View>
+                )}
+
                 {!imageLoaded && (
                   <ActivityIndicator
                     size="large"
