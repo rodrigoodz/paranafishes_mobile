@@ -5,20 +5,13 @@ import ScrollList from "../components/ScrollList";
 import removeAccents from "../helpers/removeAccents";
 import Title from "../components/Title";
 import StateContext from "../../StateContext";
-import { useIsFocused } from "@react-navigation/native";
 
 const SearchScreen = () => {
   const [searchText, setSearchText] = useState("");
   const [results, setResults] = useState([]);
   const [errorMessage, setErrorMessage] = useState("");
 
-  const isFocused = useIsFocused();
-
   const { fishes } = useContext(StateContext);
-
-  if (!isFocused && searchText.length > 0) {
-    setSearchText("");
-  }
 
   const handleSearch = () => {
     if (searchText.length !== 0) {
