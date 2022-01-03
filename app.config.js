@@ -4,7 +4,7 @@ export default {
   expo: {
     name: "PecesRioParana",
     slug: "PecesRioParana",
-    version: "1.0.1",
+    version: "1.0.2",
     orientation: "portrait",
     icon: "./assets/icon.png",
     splash: {
@@ -27,7 +27,7 @@ export default {
       softwareKeyboardLayoutMode: "pan",
       package: "com.rodrigoodz.pecesParana",
       permissions: [],
-      versionCode: 2,
+      versionCode: 3,
     },
     web: {
       favicon: "./assets/favicon.png",
