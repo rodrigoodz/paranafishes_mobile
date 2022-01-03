@@ -15,7 +15,7 @@ import colors from "../theme/colors";
 const AVATAR_SIZE = 70;
 const SPACING = 10;
 
-const ScrollList = ({ data }) => {
+const ScrollList = ({ data, previousScreen = null }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   const navigation = useNavigation();
@@ -32,7 +32,10 @@ const ScrollList = ({ data }) => {
           return (
             <TouchableOpacity
               onPress={() =>
-                navigation.navigate("Pez", { fishName: item.scientificName })
+                navigation.navigate("Pez", {
+                  fishName: item.scientificName,
+                  previousScreen: previousScreen,
+                })
               }
             >
               <View

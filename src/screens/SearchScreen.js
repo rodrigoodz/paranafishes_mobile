@@ -88,7 +88,7 @@ const SearchScreen = () => {
           </Text>
         )}
         {errorMessage.length === 0 && searchText.length > 0 && (
-          <ScrollList data={results} />
+          <ScrollList data={results} previousScreen={"Buscar"} />
         )}
       </View>
     </View>

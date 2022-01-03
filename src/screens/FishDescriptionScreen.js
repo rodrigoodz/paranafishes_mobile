@@ -16,7 +16,7 @@ const ITEM_WIDTH = Math.round(Dimensions.get("window").width * 0.85);
 
 const FishDescriptionScreen = ({ route }) => {
   const { fishes } = useContext(StateContext);
-  const { fishName } = route.params;
+  const { fishName, previousScreen } = route.params;
 
   const fishInfo = fishes.find((fish) => fish.scientificName === fishName);
 
@@ -199,7 +199,7 @@ const FishDescriptionScreen = ({ route }) => {
           )}
         </ScrollView>
       </View>
-      <GoBackButton />
+      <GoBackButton previousScreen={previousScreen} />
     </View>
   );
 };
