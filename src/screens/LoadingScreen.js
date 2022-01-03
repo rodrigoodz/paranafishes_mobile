@@ -14,7 +14,7 @@ const LoadingScreen = () => {
     >
       <ActivityIndicator size={50} color={colors.secondary} />
       <Text style={{ color: colors.secondary, marginTop: 10 }}>
-        Cargando informacion de los peces
+        Cargando información
       </Text>
     </View>
   );
