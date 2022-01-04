@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { View, Text, StatusBar, TouchableOpacity } from "react-native";
 import MyCarousel from "../components/MyCarousel";
 import Title from "../components/Title";
@@ -7,11 +7,23 @@ import getFamilies from "../helpers/getFamilies";
 import getOrders from "../helpers/getOrders";
 import fonts from "../theme/fonts";
 import StateContext from "../../StateContext";
+import { AdMobInterstitial } from "expo-ads-admob";
+import Constants from "expo-constants";
 
 const HomeScreen = ({ navigation }) => {
   const fishesData = useContext(StateContext);
 
   const { orders, families } = fishesData;
+
+  useEffect(() => {
+    const init = async () => {
+      await AdMobInterstitial.setAdUnitID(Constants.manifest.extra.admobUnitID);
+      await AdMobInterstitial.requestAdAsync({ servePersonalizedAds: true });
+      await AdMobInterstitial.showAdAsync();
+    };
+
+    init();
+  }, []);
 
   return (
     <View

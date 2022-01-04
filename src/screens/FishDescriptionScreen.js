@@ -29,6 +29,12 @@ const FishDescriptionScreen = ({ route }) => {
         flexDirection: "column",
       }}
     >
+      {/* <AdMobBanner
+        bannerSize="fullBanner"
+        adUnitID="ca-app-pub-8579641926781392/6245821520" // Test ID, Replace with your-admob-unit-id
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      /> */}
       <View
         style={{
           flex: 1 / 2,

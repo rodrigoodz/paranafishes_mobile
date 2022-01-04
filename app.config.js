@@ -28,6 +28,9 @@ export default {
       package: "com.rodrigoodz.pecesParana",
       permissions: [],
       versionCode: 4,
+      config: {
+        googleMobileAdsAppId: "ca-app-pub-8579641926781392~9610544982",
+      },
     },
     web: {
       favicon: "./assets/favicon.png",
@@ -39,6 +42,7 @@ export default {
       storageBucket: process.env.REACT_APP_storageBucket,
       messagingSenderId: process.env.REACT_APP_messagingSenderId,
       appId: process.env.REACT_APP_appId,
+      admobUnitID: process.env.REACT_APP_admobUnitID,
     },
   },
 };
