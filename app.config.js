@@ -2,9 +2,9 @@ import "dotenv/config";
 
 export default {
   expo: {
-    name: "PecesRioParana",
-    slug: "PecesRioParana",
-    version: "1.0.3",
+    name: "PecesParana",
+    slug: "PecesParana",
+    version: "1.0.4",
     orientation: "portrait",
     icon: "./assets/icon.png",
     splash: {
@@ -25,11 +25,11 @@ export default {
         backgroundColor: "#FFFFFF",
       },
       softwareKeyboardLayoutMode: "pan",
-      package: "com.rodrigoodz.pecesParana",
+      package: "com.pecesParana",
       permissions: [],
-      versionCode: 4,
+      versionCode: 5,
       config: {
-        googleMobileAdsAppId: "ca-app-pub-8579641926781392~9610544982",
+        googleMobileAdsAppId: process.env.REACT_APP_googleMobileAdsAppId,
       },
     },
     web: {
