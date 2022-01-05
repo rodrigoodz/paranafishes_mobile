@@ -56,7 +56,7 @@ const SearchScreen = () => {
           padding: 5,
           marginTop: 5,
           marginBottom: 5,
-          borderRadius: 20,
+          borderRadius: 12,
           paddingLeft: 10,
           paddingRight: 10,
           marginLeft: 20,

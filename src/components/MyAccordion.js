@@ -69,7 +69,7 @@ const MyAccordion = () => {
       <View
         style={{
           backgroundColor: colors.primary,
-          borderRadius: 8,
+          borderRadius: 12,
           padding: 5,
           marginTop: 5,
         }}
