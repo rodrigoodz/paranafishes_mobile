@@ -8,6 +8,7 @@ import {
   ScrollView,
 } from "react-native";
 import StateContext from "../../StateContext";
+import FishTextItem from "../components/FishTextItem";
 import GoBackButton from "../components/GoBackButton";
 import colors from "../theme/colors";
 import fonts from "../theme/fonts";
@@ -29,12 +30,6 @@ const FishDescriptionScreen = ({ route }) => {
         flexDirection: "column",
       }}
     >
-      {/* <AdMobBanner
-        bannerSize="fullBanner"
-        adUnitID="ca-app-pub-8579641926781392/6245821520" // Test ID, Replace with your-admob-unit-id
-        servePersonalizedAds // true or false
-        onDidFailToReceiveAdWithError={(e) => console.log(e)}
-      /> */}
       <View
         style={{
           flex: 1 / 2,
@@ -110,99 +105,18 @@ const FishDescriptionScreen = ({ route }) => {
         }}
       >
         <ScrollView showsVerticalScrollIndicator={false}>
-          <View style={{ marginBottom: 5 }}>
-            <Text
-              style={{
-                color: colors.textPrimary,
-                fontSize: fonts.size.font14,
-                fontWeight: "bold",
-              }}
-            >
-              Orden
-            </Text>
-            <Text style={{ textAlign: "justify", color: colors.textPrimary }}>
-              {fishInfo.order}
-            </Text>
-          </View>
-          <View style={{ marginBottom: 5 }}>
-            <Text
-              style={{
-                color: colors.textPrimary,
-                fontSize: fonts.size.font14,
-                fontWeight: "bold",
-              }}
-            >
-              Familia
-            </Text>
-            <Text style={{ textAlign: "justify", color: colors.textPrimary }}>
-              {fishInfo.family}
-            </Text>
-          </View>
-          {Boolean(fishInfo.description) && (
-            <View style={{ marginBottom: 5 }}>
-              <Text
-                style={{
-                  color: colors.textPrimary,
-                  fontSize: fonts.size.font14,
-                  fontWeight: "bold",
-                }}
-              >
-                Descripción
-              </Text>
-              <Text style={{ textAlign: "justify", color: colors.textPrimary }}>
-                {fishInfo.description}
-              </Text>
-            </View>
-          )}
-          {Boolean(fishInfo.biology) && (
-            <View style={{ marginBottom: 5 }}>
-              <Text
-                style={{
-                  color: colors.textPrimary,
-                  fontSize: fonts.size.font14,
-                  fontWeight: "bold",
-                }}
-              >
-                Biología
-              </Text>
-              <Text style={{ textAlign: "justify", color: colors.textPrimary }}>
-                {fishInfo.biology}
-              </Text>
-            </View>
-          )}
-
-          {Boolean(fishInfo.distribution) && (
-            <View style={{ marginBottom: 5 }}>
-              <Text
-                style={{
-                  color: colors.textPrimary,
-                  fontSize: fonts.size.font14,
-                  fontWeight: "bold",
-                }}
-              >
-                Distribución
-              </Text>
-              <Text style={{ textAlign: "justify", color: colors.textPrimary }}>
-                {fishInfo.distribution}
-              </Text>
-            </View>
-          )}
-          {Boolean(fishInfo.observations) && (
-            <View style={{ marginBottom: 5 }}>
-              <Text
-                style={{
-                  color: colors.textPrimary,
-                  fontSize: fonts.size.font14,
-                  fontWeight: "bold",
-                }}
-              >
-                Observaciones
-              </Text>
-              <Text style={{ textAlign: "justify", color: colors.textPrimary }}>
-                {fishInfo.observations}
-              </Text>
-            </View>
-          )}
+          <FishTextItem title={"Orden"} subtitle={fishInfo.order} />
+          <FishTextItem title={"Familia"} subtitle={fishInfo.family} />
+          <FishTextItem title={"Descripción"} subtitle={fishInfo.description} />
+          <FishTextItem title={"Biología"} subtitle={fishInfo.biology} />
+          <FishTextItem
+            title={"Distribución"}
+            subtitle={fishInfo.distribution}
+          />
+          <FishTextItem
+            title={"Observaciones"}
+            subtitle={fishInfo.observations}
+          />
         </ScrollView>
       </View>
       <GoBackButton previousScreen={previousScreen} />
