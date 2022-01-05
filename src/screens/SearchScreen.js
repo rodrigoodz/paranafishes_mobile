@@ -38,6 +38,7 @@ const SearchScreen = () => {
   };
 
   const handleInput = (newText) => {
+    results.length > 0 && setResults([]);
     setSearchText(newText);
   };
 
