@@ -101,7 +101,7 @@ const FishDescriptionScreen = ({ route }) => {
           display: "flex",
           paddingLeft: 20,
           paddingRight: 20,
-          paddingTop: 20,
+          marginTop: 10,
         }}
       >
         <ScrollView showsVerticalScrollIndicator={false}>
