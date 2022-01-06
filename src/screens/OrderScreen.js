@@ -74,7 +74,9 @@ const OrderScreen = ({ route, navigation }) => {
                   })
                 }
               >
-                <Text style={{ fontWeight: "bold" }}>{family}</Text>
+                <Text style={{ fontWeight: "bold", color: colors.textPrimary }}>
+                  {family}
+                </Text>
               </TouchableOpacity>
             ))}
           </View>
