@@ -5,6 +5,7 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 import SearchScreen from "../screens/SearchScreen";
 import colors from "../theme/colors";
 import InfoScreen from "../screens/InfoScreen";
+import SearchStack from "./SearchStack";
 
 const Tab = createBottomTabNavigator();
 
@@ -30,7 +31,7 @@ const NavTab = () => {
       })}
     >
       <Tab.Screen name="Explorar" component={HomeStack} />
-      <Tab.Screen name="Buscar" component={SearchScreen} />
+      <Tab.Screen name="Buscar" component={SearchStack} />
       <Tab.Screen name="Info" component={InfoScreen} />
     </Tab.Navigator>
   );

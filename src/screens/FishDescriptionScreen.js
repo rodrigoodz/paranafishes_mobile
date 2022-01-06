@@ -119,7 +119,7 @@ const FishDescriptionScreen = ({ route }) => {
           />
         </ScrollView>
       </View>
-      <GoBackButton previousScreen={previousScreen} />
+      <GoBackButton />
     </View>
   );
 };

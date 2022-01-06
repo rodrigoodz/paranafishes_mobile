@@ -2,14 +2,10 @@ import React from "react";
 import { Text, TouchableOpacity, View, Dimensions } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
-const GoBackButton = ({ previousScreen = null }) => {
+const GoBackButton = () => {
   const navigation = useNavigation();
 
   const handlePress = () => {
-    // Si le paso como parametro previousScreen voy forzadamente a esa pantalla, sino vuelvo normalmente
-    if (previousScreen) {
-      return navigation.navigate(previousScreen);
-    }
     navigation.goBack();
   };
 
