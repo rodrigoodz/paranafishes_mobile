@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, TouchableOpacity, Image, StyleSheet } from "react-native";
+import { View, Text, TouchableOpacity, Image } from "react-native";
 import Accordion from "react-native-collapsible/Accordion";
 import getImagesByName from "../helpers/getImagesByName";
 import colors from "../theme/colors";

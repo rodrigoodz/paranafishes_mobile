@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   View,
   Text,
@@ -67,7 +67,6 @@ const styles = StyleSheet.create({
     fontSize: fonts.size.font26,
     fontWeight: "bold",
     paddingLeft: 5,
-    // paddingTop: 5,
   },
 });
 

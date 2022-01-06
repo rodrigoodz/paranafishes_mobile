@@ -15,7 +15,7 @@ import colors from "../theme/colors";
 const AVATAR_SIZE = 70;
 const SPACING = 10;
 
-const ScrollList = ({ data, previousScreen = null }) => {
+const ScrollList = ({ data }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   const navigation = useNavigation();
@@ -34,7 +34,6 @@ const ScrollList = ({ data, previousScreen = null }) => {
               onPress={() =>
                 navigation.navigate("Pez", {
                   fishName: item.scientificName,
-                  previousScreen: previousScreen,
                 })
               }
             >

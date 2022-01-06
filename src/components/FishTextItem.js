@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text } from "react-native";
 import colors from "../theme/colors";
 import fonts from "../theme/fonts";
+
 const FishTextItem = ({ title = null, subtitle = null }) => {
   if (Boolean(subtitle)) {
     return (

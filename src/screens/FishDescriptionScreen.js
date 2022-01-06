@@ -17,7 +17,7 @@ const ITEM_WIDTH = Math.round(Dimensions.get("window").width * 0.85);
 
 const FishDescriptionScreen = ({ route }) => {
   const { fishes } = useContext(StateContext);
-  const { fishName, previousScreen } = route.params;
+  const { fishName } = route.params;
 
   const fishInfo = fishes.find((fish) => fish.scientificName === fishName);
 
