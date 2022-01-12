@@ -71,26 +71,27 @@ const FishDescriptionScreen = ({ route }) => {
             flexDirection: "row",
           }}
         >
-          {fishInfo.commonName.map((name, index) => (
-            <View
-              key={index}
-              style={{
-                backgroundColor: colors.primary,
-                borderRadius: 8,
-                padding: name ? 4 : 0,
-                marginLeft: 5,
-              }}
-            >
-              <Text
+          {fishInfo.commonName?.length !== 0 &&
+            fishInfo.commonName?.map((name, index) => (
+              <View
+                key={index}
                 style={{
-                  fontSize: fonts.size.font12,
-                  color: colors.textPrimary,
+                  backgroundColor: colors.primary,
+                  borderRadius: 8,
+                  padding: name ? 4 : 0,
+                  marginLeft: 5,
                 }}
               >
-                {name}
-              </Text>
-            </View>
-          ))}
+                <Text
+                  style={{
+                    fontSize: fonts.size.font12,
+                    color: colors.textPrimary,
+                  }}
+                >
+                  {name}
+                </Text>
+              </View>
+            ))}
         </View>
         <Image
           source={{

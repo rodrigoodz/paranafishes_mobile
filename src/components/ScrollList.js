@@ -110,8 +110,8 @@ const ScrollList = ({ data }) => {
                     {item.scientificName}
                   </Text>
                   <View style={{ flexDirection: "row" }}>
-                    {item.commonName.length !== 0 &&
-                      item.commonName.map((name, index) => (
+                    {item.commonName?.length !== 0 &&
+                      item.commonName?.map((name, index) => (
                         <View
                           key={index}
                           style={{
