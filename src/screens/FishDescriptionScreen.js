@@ -12,6 +12,7 @@ import FishTextItem from "../components/FishTextItem";
 import GoBackButton from "../components/GoBackButton";
 import colors from "../theme/colors";
 import fonts from "../theme/fonts";
+import ImageViewer from "../components/ImageViewer";
 
 const ITEM_WIDTH = Math.round(Dimensions.get("window").width * 0.85);
 
@@ -40,20 +41,26 @@ const FishDescriptionScreen = ({ route }) => {
           position: "relative",
         }}
       >
-        <Text
+        <View
           style={{
             position: "absolute",
             top: 0,
             left: 0,
             margin: 10,
             zIndex: 10,
-            fontWeight: "bold",
-            fontSize: fonts.size.font18,
-            color: colors.textPrimary,
           }}
         >
-          {fishInfo.scientificName}
-        </Text>
+          <Text
+            style={{
+              fontWeight: "bold",
+              fontSize: fonts.size.font18,
+              color: colors.textPrimary,
+            }}
+          >
+            {fishInfo.scientificName}
+          </Text>
+          <ImageViewer fishName={fishName} />
+        </View>
         <View
           style={{
             position: "absolute",
@@ -88,7 +95,7 @@ const FishDescriptionScreen = ({ route }) => {
         <Image
           source={{
             uri: `https://firebasestorage.googleapis.com/v0/b/paranafishes.appspot.com/o/${encodeURIComponent(
-              fishInfo.imageName
+              fishName
             )}.png?alt=media`,
           }}
           resizeMode={"contain"}
