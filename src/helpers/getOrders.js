@@ -59,5 +59,3 @@ const getOrders = () => {
 };
 
 export default getOrders;
-
-// TODO ir agregando las fotos que faltan cambiando lo que esta despues de la url https://peces.paradais-sphynx.com/tag/characiformes

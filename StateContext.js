@@ -36,7 +36,6 @@ export const StateProvider = ({ children }) => {
         setFishesData({ fishes, orders, families });
       } catch (error) {
         console.log(error);
-        // TODO  hacer un setFishesData con null y a eso leerlo en las pantallas para indicar algun mensaje de que hubo un error de carga
       }
     };
     getOrders();
